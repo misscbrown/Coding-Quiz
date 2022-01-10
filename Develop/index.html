@@ -9,10 +9,26 @@
 
 <style>
     h1 {text-align: center;}
-    p {text-align: center;}
 </style>
 
 <body>
+    <div class="container">
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="button-grid">
+                <button class="button">Answer 1</button>
+                <button class="button">Answer 2</button>
+                <button class="button">Answer 3</button>
+                <button class="button">Answer 4</button>
+
+        </div>
+        <div class="controls">
+            <button id="start-quiz" class="start-quiz-btn">Start Quiz</button>
+            <button id="next" class="next-button hide">Next</button>
+        </div>
+
+
+    </div>
     <h1>Coding Quiz</h1> 
     <p>Try your best to answer these multiple choice questions in 90 seconds!
         Keep track of your score by inputting your initials at the end of the quiz. 
@@ -50,7 +66,7 @@
 
     </form>
 
-    <button>start Quiz</button>
+    <button id="start-quiz" class="start-quiz-btn">Start Quiz</button>
 
     <div class="timer"></div>
 
