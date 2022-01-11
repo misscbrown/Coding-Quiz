@@ -1,86 +1,36 @@
 <!DOCTYPE html>
-<lang lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-
-<style>
-    h1 {text-align: center;}
-</style>
-
-<body>
-    <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="button-grid">
-                <button class="button">Answer 1</button>
-                <button class="button">Answer 2</button>
-                <button class="button">Answer 3</button>
-                <button class="button">Answer 4</button>
-
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Coding Quiz</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Test Your Knowledge</h2>
         </div>
-        <div class="controls">
-            <button id="start-quiz" class="start-quiz-btn">Start Quiz</button>
-            <button id="next" class="next-button hide">Next</button>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Try your best to answer these multiple choice questions in 90 seconds!
+            Keep track of your score by inputting your initials at the end of the quiz. 
+            Good luck!"
+            aria-label="Generated Password"
+          ></textarea>
         </div>
-
-
+        <div class="card-footer">
+          <button id="generate" class="btn">Start Quiz</button>
+        </div>
+      </div>
     </div>
-    <h1>Coding Quiz</h1> 
-    <p>Try your best to answer these multiple choice questions in 90 seconds!
-        Keep track of your score by inputting your initials at the end of the quiz. 
-        Good luck!
-    </p>
-
-    <form class="quiz">
-        <div class="questions">
-            <p>1. What does HTML stand for?</p>
-            <p><input type="radio" name="q1" value="a" checked > </p>
-            <label>Hyper Text Markup Language</label>
-
-            <p><input type="radio" name="q1" value="b" checked > </p>
-            <label>Hyper Type Made Language</label>
-
-            <p><input type="radio" name="q1" value="c" checked > </p>
-            <label>Hyper Tick Marked Language</label>
-        </div>
-
-        <div class="questions">
-            <p>2. What does CSS stand for?</p>
-            <p><input type="radio" name="q2" value="a" checked > </p>
-            <label>Casanova Style Service</label>
-
-            <p><input type="radio" name="q2" value="b" checked > </p>
-            <label>Cascading Style Sheets</label>
-
-            <p><input type="radio" name="q2" value="c" checked > </p>
-            <label>Casting Style Solos</label>
-        </div>
-        <input type="next"
-        class="next-button">
-
-    </form>
-
-    <button id="start-quiz" class="start-quiz-btn">Start Quiz</button>
-
-    <div class="timer"></div>
-
-    <div class="Final-score"></div>
-
-    <div class="Enter-Initials"></div>
-
-    <div class="All-Done"></div>
-
-    <div class="Enter Initials"></div>
-
-    <div class="High-Scores"></div>
-
-        <button>Go Back</button>
-        <button>Clear High Scores</button>
-</div>
- <script src="/Develop/script.js"></script>
-
-</body>
+    <script src="script.js"></script>
+  </body>
+</html>
