@@ -40,6 +40,17 @@ function displayMessage() {
 
 counting();
 
+const question = document.querySelector('#question')
+const answers = Array.from(document.querySelectorAll('.answers'))
+const progressText = document.querySelector('#progressText')
+const scoreArea = document.querySelector('#scoreArea')
+
+var currentQuestion = {}
+var acceptingAnswers = true
+var score = 0
+var questionCounter = 0
+var availableQuestions = []
+
 //Questions for quiz
 
 const questions = [
@@ -90,7 +101,13 @@ const questions = [
 
 ]
 
+const max_points = 100
+const max_questions = 5
 
+startQquiz = () => {
+    
+
+}
 
 
 
