@@ -40,16 +40,21 @@ function displayMessage() {
 
 counting();
 
-const question = document.querySelector('#question')
-const answers = Array.from(document.querySelectorAll('.answers'))
-const progressText = document.querySelector('#progressText')
-const scoreArea = document.querySelector('#scoreArea')
+const startButton = document.getElementById('start-quiz')
+const question = document.getElementById('question')
+const answers = Array.from(document.querySelectorAll('#answers'))
+const progressText = document.getElementById('progressText')
+const scoreArea = document.getElementById('scoreArea')
+const highScoresButton = document.getElementById('showScoresButton')
 
 var currentQuestion = {}
 var acceptingAnswers = true
 var score = 0
 var questionCounter = 0
 var availableQuestions = []
+
+startButton.addEventListener('click', startQuiz);
+
 
 //Questions for quiz
 
@@ -104,12 +109,28 @@ const questions = [
 const max_points = 100
 const max_questions = 5
 
-startQquiz = () => {
-    
-
+function startQuiz () {
+   questionCounter = 0
+   score = 0
+   availableQuestions = [...questions]
+   renderNewQuestion()
 }
 
+renderNewQuestion = () => {
+    if(availableQuestions.length === 0 || questionCounter > max_questions) {
+        localStorage.setItem('mostRecentScore', score)
 
+        return window.location.assign('/end.html')
+    }
+    
+    
+//     questionCounter++
+//     progressText.innerText = `Question ${questionCounter} of ${max_questions}`
+    
+//     const questionsIndex = Math.floor(math.random() * availableQuestions.length)
+//     currentQuestion = availableQuestions[questionsIndex]
+    
+// }
 
 // function startTimer() {
 
