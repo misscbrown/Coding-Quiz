@@ -19,35 +19,36 @@ const questions = [
     answer: "Cascading Style Sheets",
   },
 
-  //     question: "What is the meaning of const?",
-  //     answers:
-  //         {
-  //         a: 'Defines a variable as unchangeable', correct: false,
-  //         b: 'Constantly typing code', correct: false,
-  //         c: 'Constantly change a variable', correct: false,
-  //         answer: a,
+  {
+    question: "What is the meaning of const?",
+    answers: [
+      "Defines a variable as unchangeable",
+      "Constantly typing code",
+      "Constantly change a variable",
+    ],
+    answer: "Defines a variable as unchangeable",
+  },
 
-  // },
+  {
+    question: "Where do we link a javascript file?",
+    answers: [
+      "At the bottom of the CSS file",
+      "At the top of the HTML file",
+      "At the bottom of the HTML file",
+    ],
+    answer: "At the bottom of the HTML file",
+  },
 
-  //     question: "Where do we link a javascript file?",
-  //     answers:
-  //         {
-  //         a: 'At the bottom of the CSS file', correct: false,
-  //         b: 'At the top of the HTML file', correct: false,
-  //         c: 'At the bottom of the HTML file', correct: false,
-  //         answer: c
+  {
+    question: "What is a Boolean?",
+    answers: [
+      "A variable that can have a true or false value",
+      "A type of scary ghost",
+      "A variable that is true, false or unsure",
+    ],
+    answer: "A variable that can have a true or false value",
+  },
 
-  // },
-        
-  //     question: "What is a Boolean?",
-  //     answers:
-  //         {
-  //         a: 'A variable that can have a true or false value', correct: false,
-  //         b: 'A type of scary ghost', correct: false,
-  //         c: 'A variable that is true, false or unsure', correct: false,
-  //         answer: a
-
-  // },
 ];
 
 //Current Question Index
@@ -73,7 +74,7 @@ function startQuiz() {
   startPage.setAttribute("class", "hide");
   //Remove class hide from questions page
   questionsPage.removeAttribute("class");
-counting();
+  counting();
   renderNewQuestion();
 }
 
@@ -109,9 +110,9 @@ function checkAnswer() {
   console.log("Selected answer:", this.textContent);
   console.log("Correct answer", questions[currentQuestionIndex].answer);
   //check if the selected answer is incorrect
-
+  
 //  // var = questions[currentQuestionIndex].answer
-
+  
   if (question==questions[currentQuestionIndex].answer) {
       renderNewQuestion(2)
   }
@@ -124,21 +125,21 @@ function checkAnswer() {
 //   }
 
   //if its incorrect we need to minus time from the timer
-
+  
 
 
   // if its correct move on
 
   //increment the currentQuestionIndex
 
-    
+
   //need to do another check to see if currentQuestionIndex is is equal to questions.length
-    
+
   //if its equal - you are out of questions - end Quiz
-    
+
   //otherwise you want to call renderNewQuestion();
 }
-    
+
 //Timer function with display message
 function counting() {
   console.log("Counting Timer triggered....");
