@@ -1,42 +1,57 @@
+// Questions for quiz
+const questions = [
+  {
+    question: "What does HTML stand for?",
+    answers: [
+      "Hyper Text Markup Language",
+      "Hyped Type Marker Language",
+      "Hover Text Markup Language",
+    ],
+    answer: "Hyper Text Markup Language",
+  },
+  {
+    question: "What does CSS stand for?",
+    answers: [
+      "Casanova Styling Shoes",
+      "Cascading Style Sheets",
+      "Cascading Sheet Sets",
+    ],
+    answer: "Cascading Style Sheets",
+  },
 
-//Timer elements from html, with message once timer complete
-var timerEl = document.getElementById('counting');
-var mainEl = document.getElementById('main');
+  //     question: "What is the meaning of const?",
+  //     answers:
+  //         {
+  //         a: 'Defines a variable as unchangeable', correct: false,
+  //         b: 'Constantly typing code', correct: false,
+  //         c: 'Constantly change a variable', correct: false,
+  //         answer: a,
 
-var message = 
-    "Time's up!";
-var words = message.split(' ');
+  // },
 
-//Timer function with display message
-function counting() {
-    var timeLeft = 90;
+  //     question: "Where do we link a javascript file?",
+  //     answers:
+  //         {
+  //         a: 'At the bottom of the CSS file', correct: false,
+  //         b: 'At the top of the HTML file', correct: false,
+  //         c: 'At the bottom of the HTML file', correct: false,
+  //         answer: c
 
-    var timeInterval = setInterval(function () {
-        if(timeLeft > 1){
-            timerEl.textContent = timeLeft + ' seconds left 🕧'
-            timeLeft--
+  // },
         
-        }
-        else {
-            timerEl.textContent = ''
-            clearInterval(timeInterval)
-            displayMessage();
-        }
-    }, 1000);
-}
+  //     question: "What is a Boolean?",
+  //     answers:
+  //         {
+  //         a: 'A variable that can have a true or false value', correct: false,
+  //         b: 'A type of scary ghost', correct: false,
+  //         c: 'A variable that is true, false or unsure', correct: false,
+  //         answer: a
 
-function displayMessage() {
-    var wordCount = 0;
+  // },
+];
 
-    var msgInterval = setInterval(function () {
-        if (words[wordCount] === undefined) {
-            clearInterval(msgInterval);
-        } else {
-            mainEl.textContent = words[wordCount];
-            wordCount++;
-        }
-    }, 1000);
-}
+//Current Question Index
+var currentQuestionIndex = 0;
 
 counting();
 
