@@ -5,59 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Coding Quiz</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="wrapper">
       <header>
         <h1>Coding Quiz</h1>
-        <!-- <div class="container">
-            <h2 id="timer"></h2>
-            <p id="main"></p>
-          </div> -->
       </header>
 
+      <!-- //Timer Section -->
       <div class="container">
         <h2 id="counting"></h2>
         <p id="main"></p>
       </div>
 
-      <section id="questionsContainer" class="hide">
-          <div id="question"></div>
-          <div id="answers" class="buttonArea"></div>
-      </section>
-
-      <section class="scores">
-          <div id="scoreArea" class="hide"></div>
-      </section>
-
-      <section class="controls">
-          <button class="btn" id="showScoresButton">See High Scores</button>
-      </section>
-      <br />
-      <div id="scoreArea" class="hide">
-        <span id="scoreDisplay"></span>
-        <input type="text" name="initials" id="initials" />
-        <button id="submitScore" class="submit">Submit Score</button>
-    </div>  
-
-
-      <div class="card">
-        <div class="card-header">
-          <h2>Test Your Knowledge</h2>
-        </div>
-        <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Try your best to answer these multiple choice questions in 90 seconds!
+      <!-- //Start Page Section -->
+      <div id="start-page">
+        <div class="card">
+          <div class="card-header">
+            <h2>Test Your Knowledge</h2>
+          </div>
+          <div class="card-body">
+            <textarea
+              readonly
+              id="password"
+              placeholder="Try your best to answer these multiple choice questions in 90 seconds!
             Keep track of your score by inputting your initials at the end of the quiz. 
             Good luck!"
-            aria-label="Coding Quiz"
-          ></textarea>
+              aria-label="Coding Quiz"
+            ></textarea>
+          </div>
+          <div class="card-footer">
+            <button id="start-quiz" class="btn">Start Quiz</button>
+          </div>
         </div>
-        <div class="card-footer">
-          <button id="start-quiz" class="btn">Start Quiz</button>
+      </div>
+
+      <!-- // Question Page Section -->
+      <section id="questionsContainer" class="hide">
+        <div id="question"></div>
+        <div id="answers" class="buttonArea">
+          
+        </div>
+      </section>
+
+      <!-- // End page section -->
+      <div class="hide">
+        <section class="scores">
+          <div id="scoreArea" class="hide"></div>
+        </section>
+        <section class="controls">
+          <button class="btn" id="showScoresButton">See High Scores</button>
+        </section>
+        <br />
+        <div id="scoreArea" class="hide">
+          <span id="scoreDisplay"></span>
+          <input type="text" name="initials" id="initials" />
+          <button id="submitScore" class="submit">Submit Score</button>
         </div>
       </div>
     </div>
