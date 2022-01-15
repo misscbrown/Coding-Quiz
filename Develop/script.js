@@ -86,8 +86,22 @@ function renderNewQuestion() {
   //assign the current questions being asked to the html
   question.textContent = currentQuestionObj.question;
 
-startButton.addEventListener('click', startQuiz);
+  //Clears down the previous questions buttons before creating and appending the new ones
+  answers.innerHTML = "";
 
+  currentQuestionObj.answers.forEach(function (answer) {
+    //create button element
+    var newButton = document.createElement("button");
+    //give the element an atribute to identify its value
+    newButton.setAttribute("class", "answersButtons");
+    //give it its text content
+    newButton.textContent = answer;
+    //give it an  onclick to check answer when selected
+    newButton.onclick = checkAnswer;
+    //add it to the html
+    answers.appendChild(newButton);
+  });
+};
 
 //Questions for quiz
 
