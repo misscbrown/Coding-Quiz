@@ -103,17 +103,14 @@ function renderNewQuestion() {
   });
 };
 
-//Questions for quiz
+function checkAnswer() {
+  console.log("Check answer triggered...");
+  console.log("Triggerer:", this);
+  console.log("Selected answer:", this.textContent);
+  console.log("Correct answer", questions[currentQuestionIndex].answer);
+  //check if the selected answer is incorrect
 
-const questions = [
-    {
-        question: "What does HTML stand for?", 
-        answers: [
-            { text: 'Hyper Text Markup Language', correct: false },
-            { text: 'Hyped Type Marker Language', correct: false },
-            { text: 'Hover Text Markup Language', correct: false }
-        ]
-    },
+//  // var = questions[currentQuestionIndex].answer
 
     {
         question: "What does CSS stand for?",
