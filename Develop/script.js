@@ -53,6 +53,18 @@ const questions = [
 //Current Question Index
 var currentQuestionIndex = 0;
 
+//Timer elements from html, with message once timer complete
+var timerEl = document.getElementById("counting");
+var mainEl = document.getElementById("main");
+
+//References to different areas of html
+var startButton = document.getElementById("start-quiz");
+var question = document.getElementById("question");
+var answers = document.getElementById("answers");
+var scoreArea = document.getElementById("scoreArea");
+var highScoresButton = document.getElementById("showScoresButton");
+var startPage = document.getElementById("start-page");
+var questionsPage = document.getElementById("questionsContainer");
 counting();
 
 const startButton = document.getElementById('start-quiz')
