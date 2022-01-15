@@ -139,20 +139,36 @@ function checkAnswer() {
   //otherwise you want to call renderNewQuestion();
 }
     
-// }
+//Timer function with display message
+function counting() {
+  console.log("Counting Timer triggered....");
+  var timeLeft = 90;
 
-// function startTimer() {
+  var timeInterval = setInterval(function () {
+    if (timeLeft > 1) {
+      timerEl.textContent = timeLeft + " seconds left 🕧";
+      timeLeft--;
+    } else {
+      timerEl.textContent = "";
+      clearInterval(timeInterval);
+      endQuiz();
+    }
+  }, 1000);
+}
 
-// }
+function endQuiz() {
+  console.log("End Quiz Triggered");
+  // clear the interval you have running
 
-// const startButton = document.getElementById("start-quiz")
+  //hide the questions screen
 
-// startButton.addEventListener('click', startQuiz)
+  //hide the timer
 
-// function startQuiz() {
+  //display the end screen
+}
 
-// }
+function saveHighscore() {}
 
-// function setNextQuestion() {
+submitScore.addEventListener("click", saveHighscore);
 
-// }
+startButton.addEventListener("click", startQuiz);
