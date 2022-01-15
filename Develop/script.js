@@ -65,20 +65,26 @@ var scoreArea = document.getElementById("scoreArea");
 var highScoresButton = document.getElementById("showScoresButton");
 var startPage = document.getElementById("start-page");
 var questionsPage = document.getElementById("questionsContainer");
+
+//Start quiz
+function startQuiz() {
+  console.log("Start Quiz triggered...");
+  //Add class hide to start page
+  startPage.setAttribute("class", "hide");
+  //Remove class hide from questions page
+  questionsPage.removeAttribute("class");
 counting();
+  renderNewQuestion();
+}
 
-const startButton = document.getElementById('start-quiz')
-const question = document.getElementById('question')
-const answers = Array.from(document.querySelectorAll('#answers'))
-const progressText = document.getElementById('progressText')
-const scoreArea = document.getElementById('scoreArea')
-const highScoresButton = document.getElementById('showScoresButton')
+function renderNewQuestion() {
+  console.log("Render new question triggered...");
+  //create a variable to reference the first element of the questions array
+  var currentQuestionObj = questions[currentQuestionIndex];
 
-var currentQuestion = {}
-var acceptingAnswers = true
-var score = 0
-var questionCounter = 0
-var availableQuestions = []
+  console.log(currentQuestionObj);
+  //assign the current questions being asked to the html
+  question.textContent = currentQuestionObj.question;
 
 startButton.addEventListener('click', startQuiz);
 
