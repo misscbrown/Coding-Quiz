@@ -112,67 +112,32 @@ function checkAnswer() {
 
 //  // var = questions[currentQuestionIndex].answer
 
-    {
-        question: "What does CSS stand for?",
-        answers: [
-            { text: 'Casanova Styling Shoes', correct: false },
-            { text: 'Cascading Style Sheets', correct: false },
-            { text: 'Cascading Sheet Sets', correct: false}
-        ]
-    },
+  if (question==questions[currentQuestionIndex].answer) {
+      renderNewQuestion(2)
+  }
 
-    {
-        question: "What is the meaning of const?",
-        answers: [
-            { text: 'Defines a variable as unchangeable', correct: false },
-            { text: 'Constantly typing code', correct: false },
-            { text: 'Constantly change a variable', correct: false}
-        ]
-    },
+//reduce timer function
+  if (!questions[currentQuestionIndex].answer) {
+    counting 
+  }
 
-    {
-        question: "Where do we link a javascript file?",
-        answers: [
-            { text: 'At the bottom of the CSS file', correct: false },
-            { text: 'At the top of the HTML file', correct: false },
-            { text: 'At the bottom of the HTML file', correct: false}
-        ]
-    },
+//   }
 
-    {
-        question: "What is a Boolean?",
-        answers: [
-            { text: 'A variable that can have a true or false value', correct: false },
-            { text: 'A type of scary ghost', correct: false },
-            { text: 'A variable that is true, false or unsure', correct: false}
-        ]
-    },
+  //if its incorrect we need to minus time from the timer
 
-]
 
-const max_points = 100
-const max_questions = 5
 
-function startQuiz () {
-   questionCounter = 0
-   score = 0
-   availableQuestions = [...questions]
-   renderNewQuestion()
+  // if its correct move on
+
+  //increment the currentQuestionIndex
+
+    
+  //need to do another check to see if currentQuestionIndex is is equal to questions.length
+    
+  //if its equal - you are out of questions - end Quiz
+    
+  //otherwise you want to call renderNewQuestion();
 }
-
-renderNewQuestion = () => {
-    if(availableQuestions.length === 0 || questionCounter > max_questions) {
-        localStorage.setItem('mostRecentScore', score)
-
-        return window.location.assign('/end.html')
-    }
-    
-    
-//     questionCounter++
-//     progressText.innerText = `Question ${questionCounter} of ${max_questions}`
-    
-//     const questionsIndex = Math.floor(math.random() * availableQuestions.length)
-//     currentQuestion = availableQuestions[questionsIndex]
     
 // }
 
