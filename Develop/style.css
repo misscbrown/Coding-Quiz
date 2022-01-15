@@ -139,3 +139,9 @@ button[disabled] {
     font-size: 0.8rem;
   }
 }
+
+.question {
+  color: #0a0a0a;
+  font-size: x-large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
